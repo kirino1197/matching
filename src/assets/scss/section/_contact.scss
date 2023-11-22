@@ -1,0 +1,89 @@
+#contact {
+    height: 0vh;
+}
+.contact__inner {
+    width: 100%;
+    height: 100%;
+    padding: 16px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    flex-direction: column;
+
+    @media (max-width: 800px){ 
+        justify-content: center;
+    }
+
+    .contact__title {
+        font-size: 6vw;
+        text-transform: uppercase;
+        line-height: 1;
+        font-weight: 800;
+        white-space: nowrap;
+        letter-spacing: -0.3vw;
+        text-align: center;
+
+        @media (max-width: 800px){ 
+            display: center;
+        }
+    }
+    .contact__text {
+        width: 100%;
+        height: 40vh;
+        background-color: var(--black);
+        color: var(--white);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        position: relative;
+
+        .text {
+            font-size: 3vw;
+            line-height: 1;
+            font-weight: 900;
+            text-transform: uppercase;
+            text-align: center;
+            position: relative;
+            z-index: 100;
+            transition: all 0.3s;
+            cursor: all-scroll;
+
+            .site {
+                border: 1px solid var(--black100);
+                display: block;
+                text-align: center;
+                padding: 0.625rem 1.5rem;
+                margin-top: 1.5rem;
+                transition: all 0.2s;
+
+                &:hover {
+                    background-color: var(--black100);
+                    color: var(--white);
+                }
+            }
+
+            @media (max-width: 800px){ 
+                font-size: 24px;
+                padding: 0 16px;
+                word-break: break-all;
+            }
+ 
+        }
+    }
+    .contact__lines {
+        width: 100%;
+
+        &.top {
+            .line {
+                margin-top: 0.5vw;
+                margin-bottom: 0;
+                display: none;
+
+                @media (max-width: 800px){ 
+                    display: block;
+                }
+            }
+        }
+    }
+}
